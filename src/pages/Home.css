@@ -97,11 +97,65 @@ flex: 1;
 gap: 10px;
 }
 
+.detail-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+.detail-title svg {
+    width: 20px;        
+    height: 20px;
+}
+
+.detail-value {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.small-detail-value {
+  font-size: 15px;
+  color: #607086;
+  margin: 10px 0px;
+}
+
+.wind-info, .precipitation-info {
+  display: flex;
+  flex-direction: column;
+  align-items:baseline;
+}
+
+.precipitation-info {
+  margin-top: 5%;
+}
+
+.amount-precipitation {
+  display: flex;
+  justify-content: end;
+  font-size: 16px;
+  color: #94A3B8;
+  margin: 10px 0px 0px 0px;
+}
+
+.unit {
+  font-size: 20px;
+  color: #94A3B8;
+}
+
 .wind-display {
 background-color: #1C252E;
 flex: 1;
 border-radius: 20px;
 border: solid 1px #283039;
+padding: 10px 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .precipitation-display {
@@ -109,6 +163,10 @@ background-color: #1C252E;
 flex: 1;
 border-radius: 20px;
 border: solid 1px #283039;
+padding: 10px 20px;
+/* display: flex;
+flex-direction: column;
+align-items: baseline; */
 }
 
 .cloud-cover-display {
@@ -116,6 +174,11 @@ background-color: #1C252E;
 flex: 1;
 border-radius: 20px;
 border: solid 1px #283039;
+padding: 10px 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: baseline;
 }
 
 .cities-display {
