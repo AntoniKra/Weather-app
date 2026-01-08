@@ -1,6 +1,7 @@
 import React from 'react';
 import { citiesList } from '../constants/mockData';
 import './Home.css';
+import { ForecastChart } from '../components/ForecastChart';
 
 
 export function Home() {
@@ -37,7 +38,41 @@ export function Home() {
 
       <div className='home-display'>
         <div className='left-display'>
-          <div className='main-display'></div>
+          <div className='main-display'>
+            <div className='main-section-1'>
+              <h1>Warszawa, Polska</h1>
+              <p>Dziś, 17:00 · Słonecznie</p>
+            </div>
+            <div className='main-section-2'>
+              <div className='main-section-2a'>
+                <h1>22°</h1>
+                <div className='main-weather-icon-section'>
+                  <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="5" fill="#FFD700"/>
+    
+    <g stroke="#FFD700" stroke-width="2.5" stroke-linecap="butt">
+        <path d="M12 2V5"/>
+        <path d="M12 19V22"/>
+        <path d="M2 12H5"/>
+        <path d="M19 12H22"/>
+        <path d="M4.93 4.93L7.05 7.05"/>
+        <path d="M16.95 16.95L19.07 19.07"/>
+        <path d="M4.93 19.07L7.05 16.95"/>
+        <path d="M16.95 7.05L19.07 4.93"/>
+    </g>
+                  </svg>
+                  <p>Odczuwalna 24°</p>
+                </div>
+              </div>
+              <div className='main-section-2b'></div>
+            </div>
+            <hr />
+            <div className='main-section-3'>
+              <div className='forecast-chart'>
+                <ForecastChart />
+              </div>
+            </div>
+          </div>
           <div className='lower-display'>
             <div className='wind-display'>
               <div className='detail-title'>
@@ -59,7 +94,12 @@ export function Home() {
             <div className='precipitation-display'>
               <div className='detail-title'>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.05 10.78C4.63 6.97 7.92 4 11.75 4C14.75 4 17.26 6.15 17.78 9H18.5C21.53 9 24 11.47 24 14.5C24 17.53 21.53 20 18.5 20H4.5C2.01 20 0 17.99 0 15.5C0 13.17 1.76 11.23 4.05 10.78ZM11 22H9V17H11V22ZM15 22H13V17H15V22ZM7 22H5V17H7V22Z"/>
+  {/* Sama chmura - płaski spód */}
+  <path d="M16.5 6C19.54 6 22 8.46 22 11.5C22 14.54 19.54 17 16.5 17H6C3.24 17 1 14.76 1 12C1 9.38 3.01 7.23 5.58 7.02C6.12 3.63 9.05 1 12.5 1C14.7 1 16.7 2.05 18 3.72C17.53 3.65 17.03 3.6 16.5 3.6V6Z" style={{transform: 'translateY(1px)'}}/> 
+  {/* 3 Krople - pochylone kreski */}
+  <path d="M8 19L6 23H8L10 19H8Z"/>
+  <path d="M13 19L11 23H13L15 19H13Z"/>
+  <path d="M18 19L16 23H18L20 19H18Z"/>
                 </svg>
                 <p>OPADY</p>
               </div>
