@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+
+
 .home-container {
     background-color: #101922;
     display: flex;
@@ -363,4 +365,9 @@ margin: 0px;
   }
 
 
-
+.active-card {
+  border: 1px solid #0088FF; 
+  background-color: #1a2633; 
+  transform: scale(1.02);   
+  transition: all 0.3s ease;
+}

@@ -36,7 +36,7 @@ export function Home() {
           <div className='main-display'>
             <div className='main-section-1'>
               <h1>{chosenCity.city}, {chosenCity.country}</h1>
-              <p>Dziś, 17:00 · Słonecznie</p>
+              <p>Dziś, 17:00 · {chosenCity.weather}</p>
             </div>
             <div className='main-section-2'>
               <div className='main-section-2a'>
@@ -103,7 +103,7 @@ export function Home() {
           <hr className='cities-divider' />
           <div className='cities'>
             {citiesList.map((miasto) => (
-            <div key={miasto.id} className='city-card' onClick={()=>setChosenCity(miasto)}>
+            <div key={miasto.id} className={`city-card ${chosenCity.id === miasto.id ? 'active-card' : '' }`} onClick={()=>setChosenCity(miasto)}>
               <div className='left-side-card'>
                 <div className='small-weather-icon'>
                   {weatherIcons[miasto.icon] || weatherIcons["default"]}
