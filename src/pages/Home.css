@@ -313,7 +313,9 @@ margin: 0px;
   }
 
   .left-side-card {
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .left-side-card div {
@@ -343,6 +345,22 @@ margin: 0px;
     align-items: end;
   }
 
+
+  .small-weather-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    
+    margin-right: 20px;
+  }
+
+
+  .small-weather-icon svg{
+    width: 48px;
+    height: 48px;
+    padding-bottom: 5px;
+  }
 
 
 
