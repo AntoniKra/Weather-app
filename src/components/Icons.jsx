@@ -210,3 +210,31 @@ export const CloudyIcon = () => (
     </g>
   </svg>
 );
+
+
+export const Compass = ({rotation}) => (
+ 
+
+<svg width="64px"  height="64px" viewBox="0 0 64 64"> 
+
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#3a4152" strokeWidth="2"/>
+  <path d="M32,8 L32,4 M32,60 L32,56 M60,32 L56,32 M4,32 L8,32" stroke="#3a4152" strokeWidth="2" strokeLinecap="round"/>
+  <text x="32" y="16" fill="#94A3B8" fontSize="10" textAnchor="middle" fontFamily="Arial">N</text>
+  <text x="32" y="54" fill="#94A3B8" fontSize="10" textAnchor="middle" fontFamily="Arial">S</text>
+  <text x="50" y="35" fill="#94A3B8" fontSize="10" textAnchor="middle" fontFamily="Arial">E</text>
+  <text x="14" y="35" fill="#94A3B8" fontSize="10" textAnchor="middle" fontFamily="Arial">W</text>
+
+ 
+  <path 
+    d="M32,12 L38,32 L32,36 L26,32 Z" 
+    fill="#0088FF" 
+    
+    style={{ 
+      transform: `rotate(${rotation}deg)`, 
+      transformOrigin: 'center',
+      transition: 'transform 0.5s ease-out' 
+    }}
+  />
+</svg> 
+
+)

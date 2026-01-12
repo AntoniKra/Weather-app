@@ -4,10 +4,31 @@ import './Home.css';
 import { ForecastChart } from '../components/ForecastChart';
 import { 
   LogoIcon, BellIcon, UserIcon, SunMainIcon, 
-  WindIcon, RainIcon, CloudIcon, PlusIcon 
+  WindIcon, RainIcon, CloudIcon, PlusIcon, 
+  Compass
 } from '../components/Icons';
 import { weatherIcons } from '../components/IconsMap';
 
+
+
+const getWindRotation = (direction) => {
+  
+  const dir = direction.toUpperCase(); 
+
+  switch (dir) {
+      case "N": return 0;
+      case "NE": return 45;
+      case "E": return 90;
+      case "SE": return 135;
+      case "S": return 180;
+      case "SW": return 225;
+      case "W": return 270;
+      case "NW": return 315;
+
+      default: return 0; 
+  }
+
+};
 
 
 export function Home() {
@@ -63,12 +84,15 @@ export function Home() {
                 <WindIcon />
                 <p>WIATR</p>
               </div>
-              <div>
+              <div className='wind-section'>
                 <div className='wind-info'>
                   <div className='detail-value'>
                     {chosenCity.wind} <span className='unit'>km/h</span>
                   </div>
                   <p className='small-detail-value'>Kierunek wiatru: {chosenCity.windDirection}</p>
+                </div>
+                <div>
+                  <Compass rotation={getWindRotation(chosenCity.windDirection)}/>
                 </div>
               </div>
             </div>

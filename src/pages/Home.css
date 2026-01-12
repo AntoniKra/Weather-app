@@ -85,6 +85,8 @@ gap: 15px;
 }
 
 .main-display{
+position: relative;
+overflow: hidden;
 background-color: #1C252E;
 flex: 3;
 border-radius: 20px;
@@ -93,6 +95,23 @@ padding:30px;
 display: flex;
     flex-direction: column; 
     justify-content: space-between;
+}
+
+.main-display::before {
+  content: '';
+  position: absolute;
+  top: -20%;    
+  right: -23%;  
+  height: 60%;  
+  width: 60%;
+  background: radial-gradient(circle at center, rgba(0, 136, 255, 0.25), transparent 50%);
+  z-index: 0; 
+  pointer-events: none;
+}
+
+.main-display > * {
+  position: relative;
+  z-index: 1;
 }
 
 .main-section-1 {
@@ -227,6 +246,13 @@ padding: 10px 20px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+}
+
+.wind-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .precipitation-display {
